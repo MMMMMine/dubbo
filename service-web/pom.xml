@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service-web</artifactId>
+    <artifactId>service-web</artifactId> 
 
 
 </project>
