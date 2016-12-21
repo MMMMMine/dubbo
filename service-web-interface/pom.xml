@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubboService-interface</artifactId>
+    <artifactId>service-web-interface</artifactId>
 
 
 </project>
