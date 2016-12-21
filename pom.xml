@@ -6,7 +6,7 @@
 
 
     <groupId>aust</groupId>
-    <artifactId>Mine</artifactId>
+    <artifactId>type-system</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!--    父module必须packing为pom-->
