@@ -1,0 +1,77 @@
+/* 公共样式 */
+body{font-family:arial,'microsoft yahei',sans-serif;}
+h2{color:#999;font-size:20px;}
+label{color:#5c5c5c}
+.login .am-input-group label{position:absolute;font-size:12px;font-style:normal}
+input::-webkit-input-placeholder{font-size:14px;}
+.margin-bottom{margin-bottom:10px;}
+.margin-top{margin-top:10px;}
+.margin-bottom-30{margin-bottom:30px;}
+.margin-right20{margin-right:20px;}
+.button-reset{display:block;margin:30px auto;}
+.am-btn-reset{display:block;margin:0 auto} 
+.am-btn-reset2{display:inline-block;margin-top:30px;margin-bottom:30px;} 
+.am-u-md-2{white-space:nowrap}
+
+/* 搜索条件区域 */
+.am-panel-bd{line-height:2.6}
+.btn-wrape2{text-align:center}
+.l-text-combobox{width:100%!important;}
+.l-text{border:0}
+.am-g .am-g {margin-right: 17rem;}
+.am-modal-prompt-input{width:100%!important;border:1px solid #CCC;} 
+.am-modal-prompt-input{margin:0}	
+.Wdate{border-radius:0;text-indent:0}
+.am-modal-prompt-input-padding{padding:.625em}
+.am-btn-position{position:absolute;right:5%}
+.am-panel-bd{position:relative}
+.am-form-group-reset{margin-bottom:20px;}
+.padding-bottom{padding-bottom:10px;}
+.emp-info{text-align:center}
+.enterAcc .am-u-md-1{width:8.333%;text-align:center;white-space:nowrap}
+
+/* 员工信息部分 */
+.employee .admin-content table{margin:10px 0 0 40px;width:100%}
+.employee-special .admin-content table{width:auto}
+.employee .td{width:200px;}
+.employee .td_title{width:100px}
+.employee-special .admin-content td{width:300px;}
+.employee-special .admin-content .td_title{width:200px;}
+.admin-content h1 {clear: both;margin : 10px  0px 0px 10px;display: block;	color: #999;font-size:25px;}
+.admin-content table{color:#5c5c5c;}
+.admin-content .text_table tr {line-height:30px;}
+.text_table td  {width: 200px;font-family:arial,'microsoft yahei',sans-serif;font-size: 15px;font-style: normal;   }
+.text_table .td_title {	font-weight: 700;}
+.td-img{height: 84px;width: 113px;cursor: pointer;}
+.emp-Sb .form span{width:200px;display:inline-block;color:#5c5c5c}
+.emp-Sb .form span.title{font-weight:700}
+.balance-pay-view h2,.salary-wallet-view h2{margin-top:20px;}
+.add-policy .l-checkboxlist-inner table,.edit-policy .l-checkboxlist-inner table{margin:0}
+.information-wrap form{margin-left:280px;}
+
+.salary .admin-content .tablereset{margin:10px 0 0 40px}
+.salary table td{width:300px;}
+.salary table .td_title{width:200px;}
+
+/* 产品按钮弹框 */
+.add-policy .checkbox-table-wrap{position:relative;margin-top:40px;margin-bottom:10px;}
+.add-policy .checkbox-table, .edit-policy .checkbox-table{width:250px;position:absolute;top:-280px;left:80px;background:#fff;text-align:center}
+.add-policy .checkbox-table th,.checkbox-table td{border:1px solid #ccc;text-align:center}
+.add-policy .checkbox-table th{background:#eee;}
+.add-policy .checkbox-table tr.button{height:40px;}
+.add-policy .checkbox-table tr.button input{width:50px;}
+.add-policy  .l-text, .add-policy .l-text-wrapper,.edit-policy .l-text, .edit-policy .l-text-wrapper{width:100%!important}
+.add-policy .am-btn-reset,.edit-policy .am-btn-reset {display:block;margin:20px auto} 
+.add-policy .am-panel-bd{line-height:1.6}
+
+.policyList table tr td:last-child .l-grid-row-cell-inner{text-align:left!important} 
+.salary-wallet-view input{background:#fff!important;}
+.salary-wallet-view{font-family:'microsoft yahei'}
+
+/*日历左侧图标修改  */
+.l-trigger,.l-trigger-hover,.l-trigger-pressed{border:0;background:none;}
+.l-trigger,.l-trigger-hover,.l-trigger-pressed{height:40px;cursor: pointer;} 
+
+
+
+
