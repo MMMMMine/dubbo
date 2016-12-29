@@ -31,17 +31,16 @@
         <mvc:message-converters register-defaults="true" >
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
 			<ref bean="jsonConverter"></ref>
-            <!--<bean-->
-                <!--class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
-                <!--<property name="objectMapper">-->
-                    <!--&lt;!&ndash;<bean class="com.fasterxml.jackson.databind.ObjectMapper">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<property name="serializationInclusion">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</property>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
-                    <!--<bean class="com.zhuanyi.vjwealth.wallet.mobile.common.server.service.ObjcetMapperCustomer"></bean>-->
-                <!--</property>-->
-            <!--</bean>-->
+          <!--  <bean
+                class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper">
+                    <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                        <property name="serializationInclusion">
+                            <value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>
+                        </property>
+                    </bean>
+                </property>
+            </bean>-->
         </mvc:message-converters>
     </mvc:annotation-driven>
 
