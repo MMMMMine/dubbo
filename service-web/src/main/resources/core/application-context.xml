@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:task="http://www.springframework.org/schema/task" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/tx
+		   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		   http://www.springframework.org/schema/aop
+		   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		   http://www.springframework.org/schema/task  
+		   http://www.springframework.org/schema/task/spring-task-3.2.xsd 
+		   ">
+
+    <!-- 配置文件加载 -->
+    <bean
+            class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:service-web.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+
+    <!-- 自动完成注解内容 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <context:annotation-config/><!--开启注解 -->
+    <task:annotation-driven/> <!-- 定时器开关 -->
+    <context:component-scan base-package="com">
+        <context:exclude-filter type="aspectj"
+                                expression="*..*JobImpl"/>
+    </context:component-scan>
+
+
+    <!-- 数据源配置, 使用连接池 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${db.driverClassName}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+        <!-- 池启动时创建的连接数量 -->
+        <property name="initialSize" value="${db.initialSize}"/>
+        <!--minIdle: 最小空闲连接 -->
+        <property name="minIdle" value="${db.minIdle}"/>
+        <!-- 最大连接数据库连接数 -->
+        <property name="maxActive" value="${db.maxActive}"/>
+        <!-- 最大等待连接中的数量，设置为0时，表示没有限制 -->
+        <property name="maxIdle" value="${db.maxIdle}"/>
+        <!-- 最大等待秒数，单位为毫秒， 超过时间会报出错误信息(毫秒) -->
+        <property name="maxWait" value="3000"/>
+
+        <!-- 1000秒自动重新校验下连接 保证连接是正常的 -->
+        <property name="timeBetweenEvictionRunsMillis" value="10000000"/>
+        <property name="testWhileIdle" value="true"/>
+        <!-- 每次拿连接都会运行sql校验，false为佳否则有性能问题 -->
+        <property name="testOnBorrow" value="false"/>
+
+        <!--removeAbandoned: 是否自动回收超时连接 -->
+        <property name="removeAbandoned" value="true"/>
+        <!--removeAbandonedTimeout: 超时时间(以秒数为单位) -->
+        <property name="removeAbandonedTimeout" value="300"/>
+
+        <property name="validationQuery" value="SELECT 1"/>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath*:/mapper/**/*Mapper.xml"/>
+        <property name="typeAliasesPackage" value="com.zhuanyi.vjwealth.loan.common.dto"/>
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <value>
+                            dialect=mysql
+                            reasonable=true
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                            rowBoundsWithCount=true
+                            pageSizeZero=true
+                            reasonable=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <!--<bean id="tkMapperScannerConfigurer" class="tk.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--<property name="basePackage" value="com"/>-->
+        <!--&lt;!&ndash; 3.2.2版本新特性，markerInterface可以起到mappers配置的作用，详细情况需要看Marker接口类 &ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="markerInterface"-->
+                  <!--value="com.zhuanyi.vjwealth.loan.common.util.MyMapper"/>&ndash;&gt;-->
+        <!--&lt;!&ndash; 通用Mapper通过属性注入进行配置，默认不配置时会注册Mapper<T>接口 <property name="properties">-->
+            <!--<value> mappers=tk.mybatis.mapper.common.Mapper </value> </property> &ndash;&gt;-->
+    <!--</bean>-->
+
+    <!--<bean id="orgMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--<property name="basePackage" value="com"/>-->
+        <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
+        <!--<property name="annotationClass" value="com.fab.server.annotation.Mapper"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"-->
+          <!--scope="prototype">-->
+        <!--<constructor-arg index="0" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash; a PlatformTransactionManager is still required &ndash;&gt;-->
+    <!--<bean id="txManager"-->
+          <!--class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+        <!--&lt;!&ndash; (this dependency is defined somewhere else) &ndash;&gt;-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+
+  <!--&lt;!&ndash;  <bean id="serviceLogAspect" class="com.zhuanyi.vjwealth.loan.common.aspect.ServiceLogAspect"/>-->
+
+
+    <!--<bean id="applicationContext" class="com.zhuanyi.vjwealth.loan.common.util.SpringUtil"/>-->
+    <!--<bean id="canaLoanService" class="com.zhuanyi.vjwealth.loan.cana.server.service.impl.CanaLoanServiceImpl"/>-->
+    <!--<bean name="initDataService" class="com.zhuanyi.vjwealth.loan.jd.server.init.InitDataService"/>&ndash;&gt;-->
+
+
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="wallet-loan-service" />
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="${zookeeper.address}" />
+
+	<!-- 多协议配置 -->
+	<dubbo:protocol name="dubbo" port="${dubbo.port}" />
+	<!--<dubbo:protocol name="hessian" port="${duboo.hessian.port}"/> -->
+    <dubbo:consumer check="false" timeout="${dubbo.consumer.timeout}" retries="${dubbo.provider.retries}"/>
+
+    <dubbo:provider timeout="${dubbo.provider.timeout}" />
+	<!-- 声明需要暴露的服务接口 -->
+	<dubbo:annotation package="com.aust.tlh" />
+	
+
+</beans>

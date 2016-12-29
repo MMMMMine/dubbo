@@ -53,6 +53,13 @@
 
         <jstl.version>1.2</jstl.version>
         <!-- 持续更新 -->
+        <jackson.version>1.9.3</jackson.version>
+        <jwt.version>0.6.0</jwt.version>
+        <javax.el.version>2.2.4</javax.el.version>
+        <javax.servlet.version>2.5</javax.servlet.version>
+        <fastjson.version>1.2.17</fastjson.version>
+        <tk.mybatis.version>3.3.6</tk.mybatis.version>
+        <pagehelper.version>4.1.1</pagehelper.version>
     </properties>
 
     <dependencyManagement>
@@ -283,27 +290,40 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.17</version>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- Jackson JSON Mapper -->
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
                 <artifactId>jackson-mapper-asl</artifactId>
-                <version>1.9.13</version>
+                <version>${jackson.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
                 <artifactId>jackson-core-asl</artifactId>
-                <version>1.9.13</version>
+                <version>${jackson.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>javax.el</groupId>
                 <artifactId>javax.el-api</artifactId>
-                <version>2.2.4</version>
+                <version>${javax.el.version}</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <!--jwt jjwt impl -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${tk.mybatis.version}</version>
             </dependency>
 
 
@@ -311,7 +331,7 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
-                <version>2.5</version>
+                <version>${javax.servlet.version}</version>
             </dependency>
 
             <!-- jstl -->
@@ -319,6 +339,12 @@
                 <groupId>jstl</groupId>
                 <artifactId>jstl</artifactId>
                 <version>${jstl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
             </dependency>
 
 
