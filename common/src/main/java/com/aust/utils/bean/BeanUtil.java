@@ -1,7 +1,7 @@
 package com.aust.utils.bean;
 
-import com.opslab.util.collection.CollectionUtil;
-import com.opslab.util.valid;
+import com.aust.utils.collection.CollectionUtil;
+import com.aust.utils.valid;
 
 import java.beans.IntrospectionException;
 import java.lang.reflect.InvocationTargetException;

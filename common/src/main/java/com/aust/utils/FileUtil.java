@@ -1,7 +1,7 @@
 package com.aust.utils;
 
-import com.opslab.util.algorithmImpl.FileTypeImpl;
-import com.opslab.util.algorithmImpl.FileImpl;
+import com.aust.utils.algorithmImpl.FileTypeImpl;
+import com.aust.utils.algorithmImpl.FileImpl;
 
 import java.io.*;
 import java.math.BigInteger;

@@ -1,6 +1,6 @@
 package com.aust.utils.image;
 
-import com.opslab.util.FileUtil;
+import com.aust.utils.FileUtil;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReadParam;

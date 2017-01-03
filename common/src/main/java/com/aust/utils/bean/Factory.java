@@ -1,6 +1,6 @@
 package com.aust.utils.bean;
 
-import com.opslab.util.valid;
+import com.aust.utils.valid;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;

@@ -1,6 +1,6 @@
 package com.aust.utils.encrypt;
 
-import com.opslab.util.CharsetUtil;
+import com.aust.utils.CharsetUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;

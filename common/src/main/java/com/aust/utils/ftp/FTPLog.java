@@ -1,6 +1,6 @@
 package com.aust.utils.ftp;
 
-import com.opslab.util.DateUtil;
+import com.aust.utils.DateUtil;
 
 /**
  * Created by Administrator on 2015-04-08.

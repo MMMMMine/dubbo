@@ -1,3 +1,4 @@
+/*
 package com.aust.utils;
 
 
@@ -11,19 +12,23 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+*/
 /**
  * 一些中文相关的操作方法
- */
+ *//*
+
 public final class ChinesUtil {
     private ChinesUtil(){
 
     }
-    /**
+    */
+/**
      * 将字符串中的中文转化为拼音,其他字符不变
      *
      * @param inputString
      * @return
-     */
+     *//*
+
     public final static String getPingYin(String inputString) {
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
         format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
@@ -47,12 +52,14 @@ public final class ChinesUtil {
         return output;
     }
 
-    /**
+    */
+/**
      * 获取汉字串拼音首字母，英文字符不变
      *
      * @param chinese 汉字串
      * @return 汉语拼音首字母
-     */
+     *//*
+
     public final static String getFirstSpell(String chinese) {
         StringBuffer            pybf          = new StringBuffer();
         char[]                  arr           = chinese.toCharArray();
@@ -76,12 +83,14 @@ public final class ChinesUtil {
         return pybf.toString().replaceAll("\\W", "").trim();
     }
 
-    /**
+    */
+/**
      * 获取汉字串拼音，英文字符不变
      *
      * @param chinese 汉字串
      * @return 汉语拼音
-     */
+     *//*
+
     public final static String getFullSpell(String chinese) {
         StringBuffer            pybf          = new StringBuffer();
         char[]                  arr           = chinese.toCharArray();
@@ -137,12 +146,14 @@ public final class ChinesUtil {
         return false;
     }
 
-    /**
+    */
+/**
      * 判断是否是中文
      *
      * @param c
      * @return
-     */
+     *//*
+
     public final static boolean isChinese(char c) {
         Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);
         if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS || ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A || ub == Character.UnicodeBlock.GENERAL_PUNCTUATION || ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS) {
@@ -151,9 +162,11 @@ public final class ChinesUtil {
         return false;
     }
 
-    /**
+    */
+/**
      * 获取一个字符串中中文字符的个数
-     */
+     *//*
+
     public final static int ChineseLength(String str) {
         Pattern p = Pattern.compile("[\u4E00-\u9FA5]+");
         Matcher m = p.matcher(str);
@@ -165,12 +178,14 @@ public final class ChinesUtil {
         return i;
     }
 
-    /**
+    */
+/**
      * 判断是否是乱码
      *
      * @param strName
      * @return
-     */
+     *//*
+
     public final static boolean isMessyCode(String strName) {
         Pattern p        = Pattern.compile("\\s*|\t*|\r*|\n*");
         Matcher m        = p.matcher(strName);
@@ -196,3 +211,4 @@ public final class ChinesUtil {
         }
     }
 }
+*/

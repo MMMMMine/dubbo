@@ -1,7 +1,7 @@
 package com.aust.utils.algorithmImpl;
 
-import com.opslab.util.FileUtil;
-import com.opslab.util.valid;
+import com.aust.utils.FileUtil;
+import com.aust.utils.valid;
 
 import java.io.*;
 import java.nio.charset.Charset;

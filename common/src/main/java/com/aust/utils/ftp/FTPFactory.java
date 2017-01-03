@@ -1,6 +1,6 @@
 package com.aust.utils.ftp;
 
-import com.opslab.util.OpslabConfig;
+import com.aust.utils.OpslabConfig;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

@@ -1,7 +1,7 @@
 package com.aust.utils.ftp;
 
-import com.opslab.util.FileUtil;
-import com.opslab.util.valid;
+import com.aust.utils.FileUtil;
+import com.aust.utils.valid;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;

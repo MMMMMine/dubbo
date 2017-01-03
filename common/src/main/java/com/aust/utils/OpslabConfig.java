@@ -1,7 +1,7 @@
 package com.aust.utils;
 
 
-import com.opslab.util.collection.CollectionUtil;
+import com.aust.utils.collection.CollectionUtil;
 import org.apache.log4j.Logger;
 
 import java.io.File;

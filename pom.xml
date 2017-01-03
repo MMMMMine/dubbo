@@ -37,8 +37,8 @@
         <mybatis-spring.version>1.2.4</mybatis-spring.version>
         <junit.version>4.12</junit.version>
         <!-- 本系统初步决定使用slf4j作为日志工具 -->
-        <!-- 本系统初步决定使用slf4j作为日志工具 -->
         <slf4j.version>1.7.5</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
 
         <!-- <dubbo.version>2.5.4</dubbo.version> -->
         <dubbo.version>2.5.3</dubbo.version>
@@ -60,6 +60,7 @@
         <fastjson.version>1.2.17</fastjson.version>
         <tk.mybatis.version>3.3.6</tk.mybatis.version>
         <pagehelper.version>4.1.1</pagehelper.version>
+        <javax.mail.version>1.4.2</javax.mail.version>
     </properties>
 
     <dependencyManagement>
@@ -147,6 +148,13 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <!-- log4j -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
 
             <!-- slf4j -->
@@ -306,13 +314,6 @@
                 <version>${jackson.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>javax.el</groupId>
-                <artifactId>javax.el-api</artifactId>
-                <version>${javax.el.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
             <!--jwt jjwt impl -->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
@@ -327,11 +328,29 @@
             </dependency>
 
 
-            <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+            <dependency>
+                <groupId>javax.el</groupId>
+                <artifactId>javax.el-api</artifactId>
+                <version>${javax.el.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${javax.servlet.version}</version>
+            </dependency>
+
+            <!-- javax.mail -->
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>1.1.1</version>
             </dependency>
 
             <!-- jstl -->
@@ -346,6 +365,7 @@
                 <artifactId>pagehelper</artifactId>
                 <version>${pagehelper.version}</version>
             </dependency>
+
 
 
         </dependencies>

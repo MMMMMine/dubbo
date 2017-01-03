@@ -1,6 +1,6 @@
 package com.aust.utils.image;
 
-import com.opslab.util.image.GIF.GifEncoder;
+import com.aust.utils.image.GIF.GifEncoder;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

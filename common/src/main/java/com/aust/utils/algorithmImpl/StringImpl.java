@@ -1,7 +1,7 @@
 package com.aust.utils.algorithmImpl;
 
-import com.opslab.util.CharsetUtil;
-import com.opslab.util.SysUtil;
+import com.aust.utils.CharsetUtil;
+import com.aust.utils.SysUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

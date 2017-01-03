@@ -1,6 +1,6 @@
 package com.aust.utils.collection;
 
-import com.opslab.util.valid;
+import com.aust.utils.valid;
 import org.apache.log4j.Logger;
 
 import java.util.*;

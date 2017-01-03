@@ -1,6 +1,6 @@
 package com.aust.utils.algorithmImpl;
 
-import com.opslab.util.StringUtil;
+import com.aust.utils.StringUtil;
 
 /**
  * 提供对字符串的全角->半角，半角->全角转换
