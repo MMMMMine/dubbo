@@ -1,7 +1,9 @@
 package com.aust.study;
 
-import com.aust.tlh.CDPlayerConfig;
+import com.aust.tlh.study.CDPlayer;
+import com.aust.tlh.study.CDPlayerConfig;
 import com.aust.tlh.study.CompactDisc;
+import com.aust.tlh.study.MediaPlayer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +21,17 @@ public class CDPlayerTest {
     @Autowired
     private CompactDisc cd ;
 
+    @Autowired
+    private MediaPlayer player;
+
     @Test
     public void cdShouldNotBeNull(){
         cd.play();
+    }
+
+    @Test
+    public void cdPlayer(){
+        player.play();
     }
 
 }
