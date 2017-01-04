@@ -93,11 +93,7 @@
             <artifactId>spring-aspects</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
 
-        </dependency>
         <!-- commons -->
         <dependency>
             <groupId>commons-pool</groupId>
