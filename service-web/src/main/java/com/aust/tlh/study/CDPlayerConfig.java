@@ -21,7 +21,7 @@ public class CDPlayerConfig {
     }
 
     @Bean
-    public MediaPlayer CDPlayer(){
+    public CDPlayer CDPlayer(){
         return new CDPlayer(new SgtPeppers());
     }
 
