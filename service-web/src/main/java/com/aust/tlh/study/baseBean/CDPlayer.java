@@ -1,4 +1,4 @@
-package com.aust.tlh.study;
+package com.aust.tlh.study.baseBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * Version 1.0
  */
 @Component
-public class CDPlayer implements MediaPlayer{
+public class CDPlayer implements MediaPlayer {
 
     private CompactDisc cd;
 

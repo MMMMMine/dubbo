@@ -1,4 +1,4 @@
-package com.aust.tlh.study;
+package com.aust.tlh.study.baseBean;
 
 import org.springframework.stereotype.Component;
 

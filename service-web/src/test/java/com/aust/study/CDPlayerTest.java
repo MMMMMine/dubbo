@@ -1,9 +1,8 @@
 package com.aust.study;
 
-import com.aust.tlh.study.CDPlayer;
-import com.aust.tlh.study.CDPlayerConfig;
-import com.aust.tlh.study.CompactDisc;
-import com.aust.tlh.study.MediaPlayer;
+import com.aust.tlh.study.baseBean.CDPlayerConfig;
+import com.aust.tlh.study.baseBean.CompactDisc;
+import com.aust.tlh.study.baseBean.MediaPlayer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
