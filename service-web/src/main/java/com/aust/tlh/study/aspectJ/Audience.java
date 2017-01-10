@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Audience {
 
-    @Pointcut("execution(** com.aust.tlh.study.aspectJ.Perfermance.*(..))")
+    @Pointcut("execution(** com.aust.tlh.study.aspectJ.Performance.perform(..))")
     public void performance(){}
 
     @Before("performance()")

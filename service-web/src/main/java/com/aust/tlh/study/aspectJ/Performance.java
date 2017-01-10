@@ -5,7 +5,9 @@ package com.aust.tlh.study.aspectJ;
  * Created by tanglinhui on 2017/1/10.
  * Version 1.0
  */
-public interface Perfermance {
+public interface Performance {
 
-    public void perform();
+    void perform();
+
+    void perform2() throws Exception;
 }

@@ -1,8 +1,7 @@
 package com.aust.study;
 
-import com.aust.tlh.study.aspectJ.Audience;
 import com.aust.tlh.study.ConcertConfig;
-import com.aust.tlh.study.aspectJ.Perfermance;
+import com.aust.tlh.study.aspectJ.Performance;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +18,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ConcertTest {
 
     @Autowired
-    private Perfermance perfermance;
+    private Performance performance;
 
     @Test
     public void testConcert(){
-        perfermance.perform();
+        try {
+            performance.perform2();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

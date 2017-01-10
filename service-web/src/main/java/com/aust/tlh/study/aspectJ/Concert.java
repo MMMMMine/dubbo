@@ -8,10 +8,21 @@ import org.springframework.stereotype.Service;
  * Version 1.0
  */
 @Service
-public class Concert implements Perfermance{
+public class Concert implements Performance {
 
     @Override
     public void perform() {
+
+    }
+
+    @Override
+    public void perform2() throws Exception{
+
+        System.out.println("doBusiness");
+
+        //throw new Exception("我失败了");
+
+
 
     }
 }
