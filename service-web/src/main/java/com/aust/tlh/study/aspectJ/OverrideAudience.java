@@ -15,25 +15,48 @@ import org.springframework.stereotype.Component;
 @Component
 public class OverrideAudience {
 
-    @Pointcut("execution(** com.aust.tlh.study.aspectJ.Performance.perform2(..))")
-    public void performance(){}
+    private static final int DEFAULT_MAX_RETRIES = 2;
 
+    private int maxRetries = DEFAULT_MAX_RETRIES;
+
+    @Pointcut("execution(** com.aust.tlh.study.aspectJ.Performance.perform2(..))")
+    public void performance() {
+    }
+
+    //失败继续尝试，并设定最大尝试次数，环绕通知的
     @Around(value = "performance()")
-    public void watchPerformance(ProceedingJoinPoint jp){
+    public void watchPerformance(ProceedingJoinPoint jp) throws Throwable {
+
+        int numAttempts = 0;
+        Exception lockFailureException = null;
 
         try {
+            do {
+                numAttempts++;
+                try {
 
-            System.out.println("Please silence cell phones");
-            System.out.println("Please taking seats");
+                    System.out.println("Please silence cell phones");
+                    System.out.println("Please taking seats");
 
-            jp.proceed();
+                    jp.proceed();
 
-            System.out.println("Clap!!Clap!!Clap!!");
+                    System.out.println("Clap!!Clap!!Clap!!");
+
+                } catch (Exception e) {
+
+                    lockFailureException = e;
+
+                }
+            } while (numAttempts <= maxRetries);
+
+            throw lockFailureException;
 
         }catch (Throwable e){
 
-            System.out.println("Demanding a refund!");
+            System.out.println("Demanding a refund");
 
         }
+
+
     }
 }

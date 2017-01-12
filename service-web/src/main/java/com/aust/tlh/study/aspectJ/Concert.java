@@ -18,9 +18,9 @@ public class Concert implements Performance {
     @Override
     public void perform2() throws Exception{
 
-        System.out.println("doBusiness");
+        //System.out.println("doBusiness");
 
-        //throw new Exception("我失败了");
+        throw new Exception("我失败了");
 
 
 
