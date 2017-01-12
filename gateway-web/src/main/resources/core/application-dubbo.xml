@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 注册名 -->
+	<dubbo:application name="gateway-web" />
+
+	<!-- zk服务地址 -->
+	<dubbo:registry address="${zookeeper.address}" />
+
+	<!-- 服务端口 -->
+	<dubbo:protocol name="dubbo" port="${dubbo.port}" />
+
+    <dubbo:consumer check="false" timeout="${dubbo.consumer.timeout}" />
+
+    <dubbo:provider timeout="${dubbo.provider.timeout}" />
+	<!-- 注解dubbo服务 -->
+	<dubbo:annotation package="com.aust.tlh" />
+
+	<dubbo:reference
+			interface="com.aust.tlh.webservice.ITlhTestDubboService"
+			id="tlhTestDubboService" owner="TLH" version="1.0.0" />
+</beans>
