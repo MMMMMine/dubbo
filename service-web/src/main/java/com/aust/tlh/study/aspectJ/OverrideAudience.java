@@ -53,6 +53,8 @@ public class OverrideAudience {
 
         }catch (Throwable e){
 
+            System.out.println(lockFailureException.getMessage());
+
             System.out.println("Demanding a refund");
 
         }

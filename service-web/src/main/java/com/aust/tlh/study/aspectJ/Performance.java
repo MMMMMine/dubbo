@@ -7,7 +7,7 @@ package com.aust.tlh.study.aspectJ;
  */
 public interface Performance {
 
-    void perform();
+    void performance();
 
     void perform2() throws Exception;
 }

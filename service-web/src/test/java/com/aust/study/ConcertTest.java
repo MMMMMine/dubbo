@@ -1,6 +1,7 @@
 package com.aust.study;
 
 import com.aust.tlh.study.ConcertConfig;
+import com.aust.tlh.study.aspectJ.Encoreable;
 import com.aust.tlh.study.aspectJ.Performance;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,12 +21,26 @@ public class ConcertTest {
     @Autowired
     private Performance performance;
 
+    @Autowired
+    private Encoreable encoreable;
+
     @Test
-    public void testConcert(){
+    public void testConcert2(){
         try {
             performance.perform2();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void testConcert(){
+        try {
+            encoreable.perform2();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 }

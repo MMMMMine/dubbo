@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 public class Concert implements Performance {
 
     @Override
-    public void perform() {
+    public void performance() {
+
+        System.out.println("perform success ! ");
 
     }
 
