@@ -61,6 +61,7 @@
         <tk.mybatis.version>3.3.6</tk.mybatis.version>
         <pagehelper.version>4.1.1</pagehelper.version>
         <javax.mail.version>1.4.2</javax.mail.version>
+        <hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
     </properties>
 
     <dependencyManagement>
@@ -329,13 +330,6 @@
 
 
             <dependency>
-                <groupId>javax.el</groupId>
-                <artifactId>javax.el-api</artifactId>
-                <version>${javax.el.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${javax.servlet.version}</version>
@@ -364,6 +358,13 @@
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
                 <version>${pagehelper.version}</version>
+            </dependency>
+
+            <!-- hibernate-validator -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
             </dependency>
 
 
