@@ -1,4 +1,4 @@
-package com.aust.tlh.study.thinkInJavaPra.controllingExecution;
+package com.aust.tlh.study.thinkInJavaPra.ControllingExecution;
 
 import java.util.Random;
 import static java.lang.System.*;

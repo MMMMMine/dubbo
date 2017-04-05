@@ -48,8 +48,9 @@
 
         <!-- zkclient -->
         <dependency>
-            <groupId>com.101tec</groupId>
+            <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
+            <version>0.1</version>
         </dependency>
 
         <dependency>
