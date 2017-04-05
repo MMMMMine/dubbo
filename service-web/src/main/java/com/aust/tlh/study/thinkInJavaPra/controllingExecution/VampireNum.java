@@ -1,6 +1,5 @@
-package com.aust.tlh.study.thinkInJavaPra.controllingExecution;
+package com.aust.tlh.study.thinkInJavaPra.ControllingExecution;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**

@@ -1,5 +1,4 @@
-package com.aust.tlh.study.thinkInJavaPra.controllingExecution;
-
+package com.aust.tlh.study.thinkInJavaPra.ControllingExecution;
 /**
  * 类描述:
  * Created by tanglinhui on 2017/2/7.
